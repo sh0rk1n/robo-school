@@ -1,0 +1,11 @@
+@import 'variables/global';
+@import 'reset';
+
+@font-face {
+  font-family: 'Jost';
+  src: url('../../shared/assets/fonts/Jost-Regular.ttf') format('ttf');
+}
+
+body {
+  font-family: 'Jost';
+}
