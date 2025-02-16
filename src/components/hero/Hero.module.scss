@@ -1,0 +1,45 @@
+@import '../../app//styles/mixins/mixins.scss';
+
+.hero {
+  background-color: var(--main-color);
+}
+
+.HeroFlex {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 50px;
+}
+
+.left {
+  grid-column: 6 span;
+  place-self: center;
+  h1 {
+    @include text-style(var(--font-family), 600, 70px, 160%, #fff);
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-top: 20px;
+    @include text-style(var(--font-family), 400, 20px, 160%, #fff);
+  }
+
+  button {
+    margin-top: 50px;
+    border: 0;
+    border-radius: 5px;
+    padding: 25px 54px;
+    background: #d52027;
+    @include text-style(var(--font-family), 400, 18px, 160%, #fff);
+    text-align: center;
+  }
+}
+
+.right {
+  grid-column: 6 span;
+  img {
+    position: relative;
+    left: 60px;
+    height: auto;
+    @include img-style();
+  }
+}

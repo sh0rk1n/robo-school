@@ -3,14 +3,18 @@ import styles from './Header.module.scss';
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.container}>
-        <p className={styles.name}>robo.school</p>
+      <div className={`${styles.HeaderContainer} container`}>
+        <a className={styles.name} href="/">
+          robo.school
+        </a>
         <nav>
           <li>О школе</li>
           <li>Тренеры</li>
           <li>Стоимость</li>
         </nav>
-        <p className={styles.number}>+7 800 000 11 22</p>
+        <a className={styles.number} href="7 800 000 11 22">
+          +7 800 000 11 22
+        </a>
       </div>
     </header>
   );

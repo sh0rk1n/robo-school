@@ -8,4 +8,11 @@
 
 body {
   font-family: 'Jost';
+  color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--content-width);
 }

@@ -1,5 +1,34 @@
-.container {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
+@import '../../app/styles/mixins/mixins.scss';
+
+.header {
+  background-color: var(--main-color);
+  text-align: center;
+  padding: 30px 0;
+}
+
+.HeaderContainer {
+  max-width: 1750px;
+  @include flex(true, true, true);
+}
+
+.name {
+  @include text-style(var(--font-family), 700, 30px, 160%, #fff);
+  text-transform: uppercase;
+}
+
+nav {
+  @include flex();
+  li {
+    @include text-style(var(--font-family), 400, 20px, 160%, #fff);
+    text-align: center;
+
+    &:not(:last-child) {
+      padding-right: 40px;
+    }
+  }
+}
+
+.number {
+  @include text-style(var(--font-family), 600, 30px, 160%, #fff);
+  text-align: right;
 }
