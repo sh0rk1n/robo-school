@@ -4,12 +4,6 @@
   background-color: var(--main-color);
 }
 
-.HeroFlex {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 50px;
-}
-
 .left {
   grid-column: 6 span;
   place-self: center;

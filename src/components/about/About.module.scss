@@ -1,0 +1,39 @@
+@import '../../app/styles/mixins/mixins.scss';
+
+.about {
+  padding: 120px 0;
+}
+
+.AboutDiv {
+  row-gap: 60px;
+}
+
+.heading {
+  grid-column: 9 span;
+  @include text-style(var(--font-family), 400, 30px, 160%, var(--main-color));
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.statsList {
+  grid-column: 12 span;
+  div {
+    grid-column: 3 span;
+  }
+}
+
+.title {
+  @include text-style(var(--font-family), 600, 70px, 160%, var(--red-color));
+}
+
+.descr {
+  @include text-style(
+    var(--font-family),
+    400,
+    18px,
+    160%,
+    rgba(20, 16, 36, 0.7)
+  );
+}

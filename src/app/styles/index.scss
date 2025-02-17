@@ -14,5 +14,11 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
-  max-width: var(--content-width);
+  max-width: var(--container-width);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
 }

@@ -4,7 +4,7 @@ import png from '../../shared/assets/img/hero_girl.png';
 export const Hero = () => {
   return (
     <section className={styles.hero}>
-      <div className={`${styles.HeroFlex} container`}>
+      <div className={`grid container`}>
         <div className={styles.left}>
           <h1>robo school</h1>
           <p>
