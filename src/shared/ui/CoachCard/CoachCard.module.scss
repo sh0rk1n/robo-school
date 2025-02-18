@@ -1,0 +1,40 @@
+@import '../../../app/styles/mixins/mixins.scss';
+
+.coachImg {
+  border-radius: 20px;
+  width: 360px;
+  height: 500px;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.title {
+  @include text-style(var(--font-family), 600, 24px, 160%, var(--main-color));
+  margin-bottom: 10px;
+}
+
+.descr {
+  @include text-style(
+    var(--font-family),
+    400,
+    18px,
+    160%,
+    rgba(20, 16, 36, 0.7) // TODO: CHANGE TO OPACITY
+  );
+  margin-bottom: 20px;
+}
+
+.details {
+  border: none;
+  background: none;
+  text-align: left;
+  @include text-style(var(--font-family), 400, 18px, 160%, var(--red-color));
+
+  &:hover {
+    background: green;
+  }
+}

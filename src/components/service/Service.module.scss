@@ -1,0 +1,9 @@
+@import '../../app/styles/mixins/mixins.scss';
+
+.service {
+  padding: 100px 0;
+}
+
+.heading {
+  @include text-style(var(--font-family), 600, 50px, 160%, var(--main-color));
+}

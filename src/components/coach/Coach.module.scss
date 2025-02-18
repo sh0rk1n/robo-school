@@ -1,0 +1,25 @@
+@import '../../app/styles/mixins/mixins.scss';
+
+.coach {
+  padding: 120px 0;
+}
+
+.heading {
+  @include text-style(var(--font-family), 600, 50px, 160%, var(--main-color));
+  margin-bottom: 50px;
+}
+
+.navigationButtons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.prevButton,
+.nextButton {
+  border: none;
+  background: none;
+}
+
+.prevButton {
+  left: -100px;
+}

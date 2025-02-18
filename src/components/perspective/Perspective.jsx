@@ -28,9 +28,9 @@ export const Perspective = () => {
               Практику
               <span className={styles.tooltip}>
                 <button>
-                  <img src={info} alt="info button" />
+                  <img src={info} className={styles.info} alt="info button" />
                 </button>
-                <span role='tooltip'>При наличии свободных мест</span>
+                <span role="tooltip">При наличии свободных мест</span>
               </span>
             </dt>
             <dd className={styles.descr}>
