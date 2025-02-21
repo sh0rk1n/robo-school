@@ -1,0 +1,67 @@
+@import '../../app/styles/mixins/mixins.scss';
+
+.form {
+  background-color: var(--red-color);
+  background-image: url(../../shared/assets/img/percents.svg);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.formContainer {
+  padding: 87px 60px;
+}
+
+.text {
+  grid-column: 6 span;
+  color: var(--light-color);
+}
+
+.title {
+  @include text-style(
+    var(--font-family),
+    600,
+    36px,
+    46.8px,
+    var(--light-color)
+  );
+  margin-bottom: 20px;
+}
+
+.descr {
+  @include text-style(var(--font-family), 400, 20px, 26px, var(--light-color));
+}
+
+.forms {
+  grid-column: 7 / 6 span;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.input {
+  @include text-style(
+    var(--font-family),
+    400,
+    18px,
+    160%,
+    rgba(40, 41, 68, 0.7)
+  );
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  border-color: transparent;
+  background: var(--light-color);
+}
+
+.btn {
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  @include text-style(var(--font-family), 400, 18px, 160%, var(--light-color));
+  text-align: center;
+}

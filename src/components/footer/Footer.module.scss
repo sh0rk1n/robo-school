@@ -1,0 +1,42 @@
+@import '../../app/styles/mixins/mixins.scss';
+
+.footer {
+  background-color: var(--main-color);
+  padding: 25px 0 40px;
+}
+
+.container {
+  max-width: 1720px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  gap: 5px;
+}
+
+.name {
+  @include text-style(var(--font-family), 700, 30px, 160%, var(--light-color));
+  text-transform: uppercase;
+}
+
+.number {
+  @include text-style(var(--font-family), 600, 30px, 48px, var(--light-color));
+  text-align: right;
+}
+
+.descr {
+  @include text-style(
+    var(--font-family),
+    400,
+    16px,
+    25.6px,
+    rgba(255, 255, 255, 0.7)
+  );
+}

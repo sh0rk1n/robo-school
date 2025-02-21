@@ -4,6 +4,8 @@ import { About } from '../components/about/About';
 import { Perspective } from '../components/perspective/Perspective';
 import { Coach } from '../components/coach/Coach';
 import { Service } from '../components/service/Service';
+import { Form } from '../components/form/Form';
+import { Footer } from '../components/footer/Footer';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
         <Perspective />
         <Coach />
         <Service />
+        <Form />
       </main>
+      <Footer />
     </div>
   );
 }
