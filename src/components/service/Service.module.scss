@@ -6,4 +6,60 @@
 
 .heading {
   @include text-style(var(--font-family), 600, 50px, 160%, var(--main-color));
+  margin-bottom: 80px;
+}
+
+.item {
+  height: 500px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  grid-column: 4 span;
+  border-radius: 20px;
+}
+
+.card {
+  width: 100%;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  border: 1px solid rgba(20, 16, 36, 0.2); // todo
+  color: var(--main-color);
+  text-align: center;
+}
+
+.title {
+  @include text-style(var(--font-family), 600, 30px, 160%, var(--main-color));
+  text-align: center;
+}
+
+.price {
+  @include text-style(var(--font-family), 600, 50px, 160%, var(--main-color));
+  text-align: center;
+}
+
+.descr {
+  @include text-style(var(--font-family), 400, 18px, 160%, var(--main-color));
+  text-align: center;
+}
+
+.btn {
+  width: 280px;
+  height: 79px;
+  padding: 25px 54px;
+  background-color: var(--red-color);
+  border: 2px solid var(--red-color);
+  border-radius: 5px;
+  text-align: center;
+  @include text-style(var(--font-family), 400, 18px, 160%, var(--light-color));
 }
