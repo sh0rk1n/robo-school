@@ -3,13 +3,18 @@
   $font-weight,
   $font-size,
   $line-height,
-  $color
+  $color,
+  $text-align: true
 ) {
   font-family: $font-family;
   font-weight: $font-weight;
   font-size: $font-size;
   line-height: $line-height;
   color: $color;
+
+  @if $text-align {
+    text-align: center;
+  }
 }
 
 @mixin img-style() {
@@ -37,6 +42,7 @@
   @if $align {
     align-items: center;
   }
+
   @if $justify {
     justify-content: space-between;
   }

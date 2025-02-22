@@ -1,9 +1,8 @@
 @import '../../app/styles/mixins/mixins.scss';
 
 .header {
-  background-color: var(--main-color);
-  text-align: center;
   padding: 30px 0;
+  background-color: var(--main-color);
 }
 
 .HeaderContainer {
@@ -12,7 +11,7 @@
 }
 
 .name {
-  @include text-style(var(--font-family), 700, 30px, 160%, var(--light-color));
+  @include text-style(var(--font-family), 700, 30px, 160%, var(--light-color), false);
   text-transform: uppercase;
 }
 
@@ -27,9 +26,8 @@ nav {
 }
 
 .link {
-  @include text-style(var(--font-family), 400, 20px, 130%, var(--light-color));
-  text-align: center;
   position: relative;
+  @include text-style(var(--font-family), 400, 20px, 130%, var(--light-color));
 
   &::before,
   &::after {
@@ -60,7 +58,7 @@ nav {
 }
 
 .number {
-  @include text-style(var(--font-family), 600, 30px, 130%, var(--light-color));
+  @include text-style(var(--font-family), 600, 30px, 130%, var(--light-color), false);
   text-align: right;
   position: relative;
 

@@ -11,7 +11,14 @@
 }
 
 .heading {
-  @include text-style(var(--font-family), 600, 50px, 160%, var(--main-color));
+  @include text-style(
+    var(--font-family),
+    600,
+    50px,
+    160%,
+    var(--main-color),
+    false
+  );
   margin-bottom: 60px;
 }
 
@@ -22,7 +29,14 @@
 }
 
 .title {
-  @include text-style(var(--font-family), 600, 24px, 160%, var(--main-color));
+  @include text-style(
+    var(--font-family),
+    600,
+    24px,
+    160%,
+    var(--main-color),
+    false
+  );
   margin-bottom: 20px;
 }
 
@@ -32,7 +46,8 @@
     400,
     18px,
     160%,
-    var(--main-color-dark)
+    var(--main-color-dark),
+    false
   );
 }
 
@@ -40,8 +55,6 @@
   position: relative;
 
   button {
-    border: none;
-    background: none;
     margin-left: 10px;
   }
 
@@ -55,7 +68,6 @@
     box-shadow: 0 2px 8px 0 rgba(20, 16, 36, 0.1);
     background: var(--light-color);
     @include text-style(var(--font-family), 400, 16px, 160%, var(--main-color));
-    text-align: center;
     visibility: hidden;
     opacity: 0;
     transition:

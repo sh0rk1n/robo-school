@@ -8,7 +8,7 @@ export const Footer = () => {
           <a className={styles.name} href="/">
             <h4>ROBO.SCHOOL</h4>
           </a>
-          <a className={styles.number} href="tel:+78000001122">
+          <a className={styles.number} href="/">
             +7 800 000 11 22
           </a>
         </div>

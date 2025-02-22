@@ -10,30 +10,21 @@ export const Form = () => {
             Акция действительна до 10 марта 2025 года
           </p>
         </div>
-        <form
-          className={`${styles.forms} flex`}
-          action="https://jsonplaceholder.typicode.com/posts"
-          method="POST"
-          enctype="multipart/form-data"
-          noValidate
-        >
+        <form className={`${styles.forms}`}>
           <label className={`${styles.label} ${styles.formsLabelName}`}>
             <input
               name="name"
               type="text"
               className={styles.input}
               placeholder="Имя"
-              data-validate-field="name"
             />
           </label>
-          <label className={styles.label} id="tel">
+          <label className={styles.label}>
             <input
               name="tel"
               type="tel"
               className={styles.input}
               placeholder="Телефон"
-              data-validate-field="tel"
-              inputMode="text"
             />
           </label>
           <label className={styles.label}>
@@ -42,12 +33,9 @@ export const Form = () => {
               type="email"
               className={styles.input}
               placeholder="E-mail"
-              data-validate-field="email"
             />
           </label>
-          <button type="submit" className={`${styles.btn}`}>
-            Оформить заявку
-          </button>
+          <button className={`${styles.btn}`}>Оформить заявку</button>
         </form>
       </div>
     </section>

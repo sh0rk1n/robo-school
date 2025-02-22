@@ -14,20 +14,32 @@
 
 .info {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(true, true, false);
   padding-top: 15px;
   gap: 5px;
 }
 
 .name {
-  @include text-style(var(--font-family), 700, 30px, 160%, var(--light-color));
+  @include text-style(
+    var(--font-family),
+    700,
+    30px,
+    160%,
+    var(--light-color),
+    false
+  );
   text-transform: uppercase;
 }
 
 .number {
-  @include text-style(var(--font-family), 600, 30px, 48px, var(--light-color));
+  @include text-style(
+    var(--font-family),
+    600,
+    30px,
+    48px,
+    var(--light-color),
+    false
+  );
   text-align: right;
 }
 
@@ -37,6 +49,7 @@
     400,
     16px,
     25.6px,
-    rgba(255, 255, 255, 0.7)
+    rgba(255, 255, 255, 0.7),
+    false
   );
 }

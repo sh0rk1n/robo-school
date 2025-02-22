@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { CoachCard } from '../../shared/ui/CoachCard/CoachCard';
@@ -12,54 +12,45 @@ import rightarrow from '../../shared/assets/img/rightarrow.svg';
 import styles from './Coach.module.scss';
 import 'swiper/css/scrollbar';
 import 'swiper/css';
+import './Swiper.scss';
+
+const coaches = [
+  { img: irina, name: 'Ирина Лайм', descr: 'преподаватель по робототехнике' },
+  {
+    img: marina,
+    name: 'Марина Орлова',
+    descr: 'преподаватель по робототехнике',
+  },
+  {
+    img: max,
+    name: 'Максим Петров',
+    descr: 'преподаватель по программированию',
+  },
+  {
+    img: kostya,
+    name: 'Константин Назаров',
+    descr: 'преподаватель по робототехнике',
+  },
+  {
+    img: liza,
+    name: 'Лиза Весенняя',
+    descr: 'преподаватель по программированию',
+  },
+]; // todo: перенести на free бд
 
 export const Coach = () => {
-  const coaches = [
-    { img: irina, name: 'Ирина Лайм', descr: 'преподаватель по робототехнике' },
-    {
-      img: marina,
-      name: 'Марина Орлова',
-      descr: 'преподаватель по робототехнике',
-    },
-    {
-      img: max,
-      name: 'Максим Петров',
-      descr: 'преподаватель по программированию',
-    },
-    {
-      img: kostya,
-      name: 'Константин Назаров',
-      descr: 'преподаватель по робототехнике',
-    },
-    {
-      img: liza,
-      name: 'Лиза Весенняя',
-      descr: 'преподаватель по программированию',
-    },
-  ]; // todo: перенести на free бд
-
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
-  const swiperRef = useRef(null);
-
-  // useEffect(() => {
-  //   if (swiperRef.current) {
-  //     swiperRef.current.params.navigation.prevEl = prevRef.current;
-  //     swiperRef.current.params.navigation.nextEl = nextRef.current;
-  //     swiperRef.current.navigation.init();
-  //     swiperRef.current.navigation.update();
-  //   }
-  // }, []);
-
   return (
     <section className={styles.coach}>
       <div className={`${styles.CoachDiv} container`}>
         <h2 className={styles.heading}>Профессиональные тренеры</h2>
         <Swiper
-          ref={swiperRef}
           spaceBetween={50}
           slidesPerView={3}
           modules={[Navigation, Scrollbar]}
+          navigation={{
+            prevEl: '.prevButton',
+            nextEl: '.nextButton',
+          }}
           scrollbar={{
             el: '.swiper-scrollbar',
             hide: false,
@@ -73,20 +64,25 @@ export const Coach = () => {
                 img={coach.img}
                 name={coach.name}
                 descr={coach.descr}
-                
               />
             </SwiperSlide>
           ))}
         </Swiper>
         <div className={styles.navigationButtons}>
-          <button ref={prevRef} className={styles.prevButton}>
+          <button
+            className={`${styles.prevButton} prevButton`}
+            data-swiper-button-prev
+          >
             <img src={leftarrow} alt="Предыдущий" />
           </button>
-          <button ref={nextRef} className={styles.nextButton}>
+          <button
+            className={`${styles.nextButton} nextButton`}
+            data-swiper-button-next
+          >
             <img src={rightarrow} alt="Следующий" />
           </button>
         </div>
-        {/* <div className="swiper-scrollbar"></div> */}
+        <div className={` ${styles.scrollbar} swiper-scrollbar`}></div>
       </div>
     </section>
   );

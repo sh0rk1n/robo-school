@@ -1,0 +1,14 @@
+.swiper-scrollbar {
+  max-width: 360px;
+  height: 20px;
+  background-color: rgba(20, 16, 36, 0.08);
+}
+
+.swiper-scrollbar-drag {
+  height: 3px;
+  background-color: var(--main-color);
+}
+
+.swiper-scrollbar-horizontal {
+  height: 3px !important;
+}

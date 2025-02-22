@@ -4,8 +4,19 @@
   padding: 120px 0;
 }
 
+.CoachDiv {
+  position: relative;
+}
+
 .heading {
-  @include text-style(var(--font-family), 600, 50px, 160%, var(--main-color));
+  @include text-style(
+    var(--font-family),
+    600,
+    50px,
+    160%,
+    var(--main-color),
+    false
+  );
   margin-bottom: 50px;
 }
 
@@ -16,7 +27,6 @@
 
 .prevButton,
 .nextButton {
-  border: none;
   background: none;
 }
 
@@ -26,4 +36,8 @@
 
 .Swiper {
   margin-bottom: 50px;
+}
+
+.scrollbar {
+  margin-bottom: 20px;
 }
