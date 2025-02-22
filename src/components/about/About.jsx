@@ -5,8 +5,8 @@ export const About = () => {
     <section className={styles.about}>
       <div className={`${styles.AboutDiv} grid container`}>
         <h2 className={styles.heading}>
-          <span>Robo School </span>– учреждение для формирования кадрового
-          педагогического резерва в сфере робототехники и программирования
+          <span>Robo School&nbsp;</span>– учреждение для формирования кадрового
+          педагогического резерва в сфере робототехники <br />и программирования
         </h2>
         <dl className={`${styles.statsList} grid`}>
           <div>

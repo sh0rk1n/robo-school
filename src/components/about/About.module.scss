@@ -19,7 +19,7 @@
 
 .statsList {
   grid-column: 12 span;
-  
+
   div {
     grid-column: 3 span;
   }
@@ -35,6 +35,6 @@
     400,
     18px,
     160%,
-    rgba(20, 16, 36, 0.7)
+    var(--main-color-dark)
   );
 }

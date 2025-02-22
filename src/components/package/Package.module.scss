@@ -16,6 +16,22 @@
   align-items: center;
   grid-column: 4 span;
   border-radius: 20px;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--main-color);
+
+    .content {
+      color: var(--light-color);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .title,
+    .price,
+    .descr {
+      color: var(--light-color);
+    }
+  }
 }
 
 .card {
@@ -24,6 +40,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: height 0.3s ease-in-out;
+
+  &:hover {
+    height: 500px;
+  }
 }
 
 .content {
@@ -33,14 +54,23 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 20px;
-  border: 1px solid rgba(20, 16, 36, 0.2); // todo
+  border: 1px solid rgba(20, 16, 36, 0.2);
   color: var(--main-color);
   text-align: center;
+  transition:
+    color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--light-color);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .title {
   @include text-style(var(--font-family), 600, 30px, 160%, var(--main-color));
   text-align: center;
+  transition: margin-bottom 0.3s ease-in-out;
 }
 
 .price {
@@ -51,6 +81,7 @@
 .descr {
   @include text-style(var(--font-family), 400, 18px, 160%, var(--main-color));
   text-align: center;
+  transition: color 0.3s ease-in-out;
 }
 
 .btn {
@@ -58,8 +89,12 @@
   height: 79px;
   padding: 25px 54px;
   background-color: var(--red-color);
-  border: 2px solid var(--red-color);
+  border: none;
   border-radius: 5px;
   text-align: center;
   @include text-style(var(--font-family), 400, 18px, 160%, var(--light-color));
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

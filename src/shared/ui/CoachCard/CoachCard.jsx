@@ -4,7 +4,7 @@ export const CoachCard = ({ img, name, descr }) => (
   <div>
     <img
       src={img}
-      className={styles.coachImg}
+      className={styles.Img}
       alt={`coach ${name.toLowerCase()}`}
     />
     <div className={styles.card}>

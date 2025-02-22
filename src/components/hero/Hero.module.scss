@@ -7,24 +7,38 @@
 .left {
   grid-column: 6 span;
   place-self: center;
-  h1 {
-    @include text-style(var(--font-family), 600, 70px, 160%, #fff);
-    text-transform: uppercase;
+}
+
+.title {
+  @include text-style(var(--font-family), 600, 70px, 160%, var(--light-color));
+  text-transform: uppercase;
+}
+
+.descr {
+  margin-top: 20px;
+  @include text-style(var(--font-family), 400, 20px, 160%, var(--light-color));
+}
+
+.btn {
+  margin-top: 50px;
+  border: 0;
+  border-radius: 5px;
+  padding: 25px 54px;
+  background: var(--red-color);
+  @include text-style(var(--font-family), 400, 18px, 160%, var(--light-color));
+  text-align: center;
+  transition:
+    background 0.1s ease-in-out,
+    transform 0.1s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
   }
 
-  p {
-    margin-top: 20px;
-    @include text-style(var(--font-family), 400, 20px, 160%, #fff);
-  }
-
-  button {
-    margin-top: 50px;
-    border: 0;
-    border-radius: 5px;
-    padding: 25px 54px;
-    background: #d52027;
-    @include text-style(var(--font-family), 400, 18px, 160%, #fff);
-    text-align: center;
+  &:active {
+    background: var(--light-color);
+    color: var(--red-color);
+    transform: scale(0.98);
   }
 }
 

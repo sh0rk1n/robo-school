@@ -3,7 +3,7 @@ import { Hero } from '../components/hero/Hero';
 import { About } from '../components/about/About';
 import { Perspective } from '../components/perspective/Perspective';
 import { Coach } from '../components/coach/Coach';
-import { Service } from '../components/service/Service';
+import { Package } from '../components/package/Package';
 import { Form } from '../components/form/Form';
 import { Footer } from '../components/footer/Footer';
 
@@ -16,7 +16,7 @@ function App() {
         <About />
         <Perspective />
         <Coach />
-        <Service />
+        <Package />
         <Form />
       </main>
       <Footer />

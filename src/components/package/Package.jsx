@@ -1,4 +1,4 @@
-import styles from './Service.module.scss';
+import styles from './Package.module.scss';
 
 const packages = [
   {
@@ -10,7 +10,7 @@ const packages = [
   { title: 'PROG', price: '10.000 ₽', description: 'УМК по программированию' },
 ];
 
-export const Service = () => {
+export const Package = () => {
   return (
     <section className={styles.service}>
       <div className={`${styles.serviceDiv} container`}>

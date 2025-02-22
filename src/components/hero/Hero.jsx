@@ -6,12 +6,12 @@ export const Hero = () => {
     <section className={styles.hero}>
       <div className={`grid container`}>
         <div className={styles.left}>
-          <h1>robo school</h1>
-          <p>
-            Курсы повышения квалификации по робототехнике для педагогов
-            начальной школы
+          <h1 className={styles.title}>robo school</h1>
+          <p className={styles.descr}>
+            Курсы повышения квалификации по робототехнике <br />
+            для педагогов начальной школы
           </p>
-          <button>Записаться на курс</button>
+          <button className={styles.btn}>Записаться на курс</button>
         </div>
         <div className={styles.right}>
           <img src={png} alt="hero girl" />

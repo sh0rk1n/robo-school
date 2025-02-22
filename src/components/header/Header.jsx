@@ -8,9 +8,21 @@ export const Header = () => {
           robo.school
         </a>
         <nav>
-          <li>О школе</li>
-          <li>Тренеры</li>
-          <li>Стоимость</li>
+          <li className={styles.item}>
+            <a href="/" className={styles.link}>
+              О школе
+            </a>
+          </li>
+          <li className={styles.item}>
+            <a href="/" className={styles.link}>
+              Тренеры
+            </a>
+          </li>
+          <li className={styles.item}>
+            <a href="/" className={styles.link}>
+              Стоимость
+            </a>
+          </li>
         </nav>
         <a className={styles.number} href="7 800 000 11 22">
           +7 800 000 11 22

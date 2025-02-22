@@ -68,11 +68,12 @@ export const Coach = () => {
           loop={true}
         >
           {coaches.map((coach, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className={styles.Swiper}>
               <CoachCard
                 img={coach.img}
                 name={coach.name}
                 descr={coach.descr}
+                
               />
             </SwiperSlide>
           ))}
