@@ -1,7 +1,8 @@
 @import '../../app/styles/mixins/mixins.scss';
 
 .coach {
-  padding: 120px 0;
+  position: relative;
+  padding: 120px 0 40px 0;
 }
 
 .CoachDiv {
@@ -9,6 +10,8 @@
 }
 
 .heading {
+  grid-column: 12 span;
+  margin-bottom: 50px;
   @include text-style(
     var(--font-family),
     600,
@@ -17,12 +20,18 @@
     var(--main-color),
     false
   );
-  margin-bottom: 50px;
+}
+
+.content {
+  grid-column: 12 span;
 }
 
 .navigationButtons {
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
+  grid-column: 11 / 2 span;
+  grid-row: 3 span;
+  gap: 10px;
 }
 
 .prevButton,
@@ -34,10 +43,6 @@
   left: -100px;
 }
 
-.Swiper {
-  margin-bottom: 50px;
-}
-
 .scrollbar {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }

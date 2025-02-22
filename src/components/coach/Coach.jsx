@@ -41,33 +41,34 @@ const coaches = [
 export const Coach = () => {
   return (
     <section className={styles.coach}>
-      <div className={`${styles.CoachDiv} container`}>
+      <div className={`${styles.CoachDiv} container grid`}>
         <h2 className={styles.heading}>Профессиональные тренеры</h2>
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          modules={[Navigation, Scrollbar]}
-          navigation={{
-            prevEl: '.prevButton',
-            nextEl: '.nextButton',
-          }}
-          scrollbar={{
-            el: '.swiper-scrollbar',
-            hide: false,
-            draggable: true,
-          }}
-          loop={true}
-        >
-          {coaches.map((coach, index) => (
-            <SwiperSlide key={index} className={styles.Swiper}>
-              <CoachCard
-                img={coach.img}
-                name={coach.name}
-                descr={coach.descr}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className={styles.content}>
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={3}
+            modules={[Navigation, Scrollbar]}
+            navigation={{
+              prevEl: '.prevButton',
+              nextEl: '.nextButton',
+            }}
+            scrollbar={{
+              el: '.swiper-scrollbar',
+              hide: false,
+              draggable: true,
+            }}
+          >
+            {coaches.map((coach, index) => (
+              <SwiperSlide key={index} className={styles.Swiper}>
+                <CoachCard
+                  img={coach.img}
+                  name={coach.name}
+                  descr={coach.descr}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
         <div className={styles.navigationButtons}>
           <button
             className={`${styles.prevButton} prevButton`}
