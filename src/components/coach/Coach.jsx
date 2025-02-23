@@ -60,7 +60,7 @@ export const Coach = () => {
             breakpoints={{
               320: { slidesPerView: 1.4, spaceBetween: 0 },
               768: { slidesPerView: 2.8, spaceBetween: 30 },
-              1024: { slidesPerView: 2.8, spaceBetween: 40 },
+              1024: { slidesPerView: 3, spaceBetween: 40 },
             }}
           >
             {coaches.map((coach, index) => (
