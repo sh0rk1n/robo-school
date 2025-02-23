@@ -56,9 +56,14 @@
     object-fit: cover;
     position: relative;
     left: 60px;
+    top: 6px;
 
     @include big-desktop {
       left: 0;
+    }
+
+    @include mobile {
+      top: -10px;
     }
   }
 }
@@ -87,7 +92,7 @@
 
 .descr {
   max-width: 485px;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
   @include text-style(
     var(--font-family),
     400,
@@ -102,6 +107,8 @@
   }
 
   @include mobile {
+    margin-bottom: -5px;
+    max-width: 250px;
     font-size: 16px;
     line-height: 25.6px;
   }
@@ -113,16 +120,22 @@
   grid-row: 2/1 span;
   border-radius: 5px;
   padding: 25px 50px;
+  margin-bottom: 70px;
   background: var(--red-color);
   @include text-style(var(--font-family), 400, 18px, 160%, var(--light-color));
 
-  @include small-tablet {
+  @include tablet {
     position: absolute;
-    bottom: 40px;
-    z-index: 200;
     left: 15px;
     right: 15px;
+    bottom: -550px;
+    z-index: 200;
     padding: 25px 15px;
+    margin-bottom: 0;
+  }
+
+  @include small-tablet {
+    bottom: 40px;
   }
 
   &:hover {

@@ -16,6 +16,10 @@ body {
   color: #fff;
 }
 
+.App {
+  overflow: hidden; // в мобильной версии убирает лишнее пространство
+}
+
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
