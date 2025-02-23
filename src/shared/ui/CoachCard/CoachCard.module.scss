@@ -1,20 +1,45 @@
 @import '../../../app/styles/mixins/mixins.scss';
 
+.content {
+  width: 360px;
+
+  @include mobile {
+    width: 220px;
+  }
+}
+
 .Img {
   border-radius: 20px;
   width: 360px;
   height: 500px;
+
+  @include tablet {
+    max-width: 220px;
+    max-height: 306px;
+  }
 }
 
 .card {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+
+  @include tablet {
+    margin-left: 0px;
+  }
+  // @include mobile {
+  //   display: flex;
+  //   align-items: flex-start;
+  // }
 }
 
 .title {
   @include text-style(var(--font-family), 600, 24px, 160%, var(--main-color));
   margin-bottom: 10px;
+
+  @include tablet {
+    font-size: 20px;
+  }
 }
 
 .descr {
@@ -26,9 +51,17 @@
     rgba(20, 16, 36, 0.7) // TODO: CHANGE TO OPACITY
   );
   margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 14px;
+  }
 }
 
 .details {
   text-align: left;
   @include text-style(var(--font-family), 400, 18px, 160%, var(--red-color));
+
+  @include tablet {
+    font-size: 16px;
+  }
 }

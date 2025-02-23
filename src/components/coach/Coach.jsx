@@ -48,7 +48,7 @@ export const Coach = () => {
         <h2 className={styles.heading}>Профессиональные тренеры</h2>
         <div className={styles.content}>
           <Swiper
-            spaceBetween={50}
+            spaceBetween={0}
             slidesPerView={3}
             modules={[Navigation, Scrollbar]}
             navigation={{ prevEl: '.prevButton', nextEl: '.nextButton' }}
@@ -56,6 +56,11 @@ export const Coach = () => {
               el: '.swiper-scrollbar',
               hide: false,
               draggable: true,
+            }}
+            breakpoints={{
+              320: { slidesPerView: 1.4, spaceBetween: 0 },
+              768: { slidesPerView: 2.8, spaceBetween: 30 },
+              1024: { slidesPerView: 2.8, spaceBetween: 40 },
             }}
           >
             {coaches.map((coach, index) => (
@@ -87,7 +92,6 @@ export const Coach = () => {
         <div className={`${styles.scrollbar} swiper-scrollbar`}></div>
       </div>
 
-     
       {selectedCoach && (
         <Modal
           isOpen={!!selectedCoach}

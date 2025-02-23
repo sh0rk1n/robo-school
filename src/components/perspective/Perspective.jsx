@@ -18,7 +18,7 @@ export const Perspective = () => {
           <div>
             <dt className={styles.title}>Знания</dt>
             <dd className={styles.descr}>
-              По основам разработки учебно-методических комплексов <br /> по
+              По основам разработки учебно-методических комплексов по
               робототехнике и программированию
             </dd>
           </div>
@@ -35,7 +35,6 @@ export const Perspective = () => {
             </dt>
             <dd className={styles.descr}>
               Возможность пройти практику по преподаванию робототехники на базе{' '}
-              <br />
               R:ED LAB (в оффлайн или онлайн формате)
             </dd>
           </div>

@@ -2,6 +2,10 @@
 
 .about {
   padding: 120px 0;
+
+  @include tablet {
+    padding: 60px 0;
+  }
 }
 
 .AboutDiv {
@@ -19,6 +23,20 @@
     false
   );
 
+  @include big-desktop {
+    grid-column: 10 span;
+  }
+
+  @include tablet {
+    grid-column: 8 span;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @include mobile {
+    grid-column: 4 span;
+  }
+
   span {
     font-weight: 600;
   }
@@ -27,8 +45,29 @@
 .statsList {
   grid-column: 12 span;
 
+  @include big-desktop {
+    grid-column: 10 span;
+    text-align: center;
+  }
+
+  @include tablet {
+    grid-column: 8 span;
+  }
+
+  @include mobile {
+    grid-column: 4 span;
+  }
+
   div {
     grid-column: 3 span;
+
+    @include big-desktop {
+      grid-column: 5 span;
+    }
+
+    @include tablet {
+      grid-column: 4 span;
+    }
   }
 }
 
@@ -41,6 +80,10 @@
     var(--red-color),
     false
   );
+
+  @include tablet {
+    font-size: 60px;
+  }
 }
 
 .descr {
@@ -52,4 +95,9 @@
     var(--main-color-dark),
     false
   );
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 25.6px;
+  }
 }

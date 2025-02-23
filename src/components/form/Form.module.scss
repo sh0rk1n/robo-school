@@ -10,11 +10,31 @@
 
 .formContainer {
   padding: 87px 60px;
+
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 
 .text {
   grid-column: 6 span;
   color: var(--light-color);
+
+  @include big-desktop {
+    grid-column: 5 span;
+  }
+
+  @include tablet {
+    grid-column: 4 span;
+  }
+
+  @include small-tablet {
+    grid-column: 2/6 span;
+  }
+
+  @include mobile {
+    grid-column: 4 span;
+  }
 }
 
 .title {
@@ -27,6 +47,13 @@
     false
   );
   margin-bottom: 20px;
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
 }
 
 .descr {
@@ -38,12 +65,36 @@
     var(--light-color),
     false
   );
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 25.6px;
+    padding: 0 35px;
+    text-align: center;
+  }
 }
 
 .forms {
   grid-column: 7 / 6 span;
   display: flex;
   flex-direction: column;
+
+  @include big-desktop {
+    grid-column: 5 span;
+  }
+
+  @include tablet {
+    grid-column: 4 span;
+  }
+
+  @include small-tablet {
+    grid-column: 2/6 span;
+  }
+
+  @include mobile {
+    grid-column: 4 span;
+    padding: 0 10px;
+  }
 }
 
 .label {
@@ -82,5 +133,9 @@
 
   &:hover {
     opacity: 0.9;
+  }
+
+  @include mobile {
+    font-size: 16px;
   }
 }

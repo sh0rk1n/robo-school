@@ -3,15 +3,24 @@
 .coach {
   position: relative;
   padding: 120px 0 40px 0;
+
+  @include tablet {
+    padding: 60px 0 10px 0;
+  }
 }
 
 .Div {
   position: relative;
+
+  @include mobile {
+    text-align: center;
+    padding: 0 10px;
+  }
 }
 
 .heading {
   grid-column: 12 span;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   @include text-style(
     var(--font-family),
     600,
@@ -20,10 +29,23 @@
     var(--main-color),
     false
   );
+
+  @include tablet {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  @include mobile {
+    grid-column: 4 span;
+  }
 }
 
 .content {
   grid-column: 12 span;
+
+  @include mobile {
+    grid-column: 4 span;
+  }
 }
 
 .navBtns {
@@ -32,6 +54,10 @@
   grid-column: 11 / 2 span;
   grid-row: 3 span;
   gap: 10px;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .prevButton,
@@ -45,4 +71,8 @@
 
 .scrollbar {
   margin-bottom: 35px;
+
+  @include mobile {
+    margin-bottom: -30px;
+  }
 }

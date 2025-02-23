@@ -6,7 +6,7 @@ export const About = () => {
       <div className={`${styles.AboutDiv} grid container`}>
         <h2 className={styles.heading}>
           <span>Robo School&nbsp;</span>– учреждение для формирования кадрового
-          педагогического резерва в сфере робототехники <br />и программирования
+          педагогического резерва в сфере робототехники и программирования
         </h2>
         <dl className={`${styles.statsList} grid`}>
           <div>

@@ -1,7 +1,7 @@
 import styles from './CoachCard.module.scss';
 
 export const CoachCard = ({ img, name, descr, onClick }) => (
-  <div>
+  <div className={styles.content}>
     <img src={img} className={styles.Img} alt={`coach ${name.toLowerCase()}`} />
     <div className={styles.card}>
       <h3 className={styles.title}>{name}</h3>
