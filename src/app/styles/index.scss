@@ -1,18 +1,19 @@
 @import 'variables/global';
 @import 'reset';
+@import './mixins/mixins';
 
 @font-face {
   font-family: 'Jost';
   src: url('../../shared/assets/fonts/Jost-Regular.ttf') format('ttf');
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Jost';
   color: #fff;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .container {
@@ -23,6 +24,19 @@ html {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
   gap: 40px;
+  grid-template-columns: repeat(12, 1fr);
+
+  @include big-desktop {
+    grid-template-columns: repeat(10, 1fr);
+    gap: 30px;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

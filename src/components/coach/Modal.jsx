@@ -67,13 +67,6 @@ export const Modal = ({ isOpen, onClose, img, name, descr }) => {
                   instagram
                 </Button>
               </Box>
-              <Button
-                variant="contained"
-                onClick={onClose}
-                sx={{ marginTop: 2, textTransform: 'none' }}
-              >
-                Закрыть
-              </Button>
             </Box>
           </Box>
 
