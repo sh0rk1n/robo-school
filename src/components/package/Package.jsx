@@ -12,7 +12,7 @@ const packages = [
 
 export const Package = () => {
   return (
-    <section className={styles.service}>
+    <section className={styles.service} id="package">
       <div className={`${styles.serviceDiv} container`}>
         <h2 className={styles.heading}>Выберите нужный пакет</h2>
         <ul className={`${styles.list} grid`}>

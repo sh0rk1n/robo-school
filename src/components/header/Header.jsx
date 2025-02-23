@@ -9,17 +9,17 @@ export const Header = () => {
         </a>
         <nav>
           <li className={styles.item}>
-            <a href="/" className={styles.link}>
+            <a href="#about" className={styles.link}>
               О школе
             </a>
           </li>
           <li className={styles.item}>
-            <a href="/" className={styles.link}>
+            <a href="#coach" className={styles.link}>
               Тренеры
             </a>
           </li>
           <li className={styles.item}>
-            <a href="/" className={styles.link}>
+            <a href="#package" className={styles.link}>
               Стоимость
             </a>
           </li>

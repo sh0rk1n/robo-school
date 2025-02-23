@@ -2,7 +2,7 @@ import styles from './About.module.scss';
 
 export const About = () => {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id = "about">
       <div className={`${styles.AboutDiv} grid container`}>
         <h2 className={styles.heading}>
           <span>Robo School&nbsp;</span>– учреждение для формирования кадрового

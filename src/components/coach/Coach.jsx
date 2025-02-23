@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Scrollbar } from 'swiper/modules';
 import { CoachCard } from '../../shared/ui/CoachCard/CoachCard';
+import { Modal } from './Modal';
 import irina from '../../shared/assets/img/coach_irina.svg';
 import marina from '../../shared/assets/img/coach_marina.svg';
 import max from '../../shared/assets/img/coach_max.svg';
@@ -36,22 +37,21 @@ const coaches = [
     name: 'Лиза Весенняя',
     descr: 'преподаватель по программированию',
   },
-]; // todo: перенести на free бд
+]; // todo на free бд
 
 export const Coach = () => {
+  const [selectedCoach, setSelectedCoach] = useState(null);
+
   return (
-    <section className={styles.coach}>
-      <div className={`${styles.CoachDiv} container grid`}>
+    <section className={styles.coach} id="coach">
+      <div className={`${styles.Div} container grid`}>
         <h2 className={styles.heading}>Профессиональные тренеры</h2>
         <div className={styles.content}>
           <Swiper
             spaceBetween={50}
             slidesPerView={3}
             modules={[Navigation, Scrollbar]}
-            navigation={{
-              prevEl: '.prevButton',
-              nextEl: '.nextButton',
-            }}
+            navigation={{ prevEl: '.prevButton', nextEl: '.nextButton' }}
             scrollbar={{
               el: '.swiper-scrollbar',
               hide: false,
@@ -64,12 +64,13 @@ export const Coach = () => {
                   img={coach.img}
                   name={coach.name}
                   descr={coach.descr}
+                  onClick={() => setSelectedCoach(coach)}
                 />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-        <div className={styles.navigationButtons}>
+        <div className={styles.navBtns}>
           <button
             className={`${styles.prevButton} prevButton`}
             data-swiper-button-prev
@@ -83,8 +84,19 @@ export const Coach = () => {
             <img src={rightarrow} alt="Следующий" />
           </button>
         </div>
-        <div className={` ${styles.scrollbar} swiper-scrollbar`}></div>
+        <div className={`${styles.scrollbar} swiper-scrollbar`}></div>
       </div>
+
+     
+      {selectedCoach && (
+        <Modal
+          isOpen={!!selectedCoach}
+          onClose={() => setSelectedCoach(null)}
+          img={selectedCoach.img}
+          name={selectedCoach.name}
+          descr={selectedCoach.descr}
+        />
+      )}
     </section>
   );
 };
