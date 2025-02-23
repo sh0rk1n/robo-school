@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/robo-school/static/css/main.7a74fff6.css",
+    "main.js": "/robo-school/static/js/main.9374ec81.js",
+    "static/media/hero_girl.png": "/robo-school/static/media/hero_girl.7d70848f762c8e3cbcd7.png",
+    "static/media/coach_max.svg": "/robo-school/static/media/coach_max.7337fc44bccf9bcf1e9c0d13097090c0.svg",
+    "static/media/coach_marina.svg": "/robo-school/static/media/coach_marina.03308e947b1249e79c5c6a9d5c5c5c9b.svg",
+    "static/media/coach_irina.svg": "/robo-school/static/media/coach_irina.2ac176de4aca45cd7078da45e4f0c376.svg",
+    "static/media/coach_liza.svg": "/robo-school/static/media/coach_liza.938030efd8a567713a38b6e7a7b9faa7.svg",
+    "static/media/coach_kostya.svg": "/robo-school/static/media/coach_kostya.0808562fd1b59157cf87116f7c27cfb5.svg",
+    "static/media/Jost-Regular.ttf": "/robo-school/static/media/Jost-Regular.59de2b38b1b77348c048.ttf",
+    "static/media/percents.svg": "/robo-school/static/media/percents.1e054296704ada4943df.svg",
+    "index.html": "/robo-school/index.html",
+    "static/media/leftarrow.svg": "/robo-school/static/media/leftarrow.e330bb585e00fcd708fa915fe311bf16.svg",
+    "static/media/rightarrow.svg": "/robo-school/static/media/rightarrow.4a9b0d0fc41ef3bff7b55898dcd330e3.svg",
+    "static/media/button_info.svg": "/robo-school/static/media/button_info.37a22806e667513fa6651ff7cb7e4ca6.svg",
+    "main.7a74fff6.css.map": "/robo-school/static/css/main.7a74fff6.css.map",
+    "main.9374ec81.js.map": "/robo-school/static/js/main.9374ec81.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a74fff6.css",
+    "static/js/main.9374ec81.js"
+  ]
+}
