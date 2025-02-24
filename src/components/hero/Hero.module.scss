@@ -122,6 +122,7 @@
   padding: 25px 50px;
   margin-bottom: 70px;
   background: var(--red-color);
+  cursor: pointer;
   @include text-style(var(--font-family), 400, 18px, 160%, var(--light-color));
 
   @include tablet {

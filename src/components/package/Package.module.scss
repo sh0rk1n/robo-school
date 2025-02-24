@@ -123,6 +123,7 @@
   padding: 25px 54px;
   background-color: var(--red-color);
   border-radius: 5px;
+  cursor: pointer;
   @include text-style(var(--font-family), 400, 18px, 160%, var(--light-color));
 
   &:hover {
